@@ -2,7 +2,7 @@
 
 ## default
 
-* [README](README.md)
+* [Javascript](README.md)
 
 ## Algorithm
 

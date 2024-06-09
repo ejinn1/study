@@ -2,7 +2,7 @@
 coverY: 0
 ---
 
-# README
+# Javascript
 
 ## JavaScript 공부 페이지
 
@@ -10,9 +10,12 @@ coverY: 0
 
 ### 알고리즘 공부
 
-[README (1).md](<README (1).md> "mention")
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 ### JavaScript 공부
 
-[undefined.md](js-learn/undefined.md "mention")
-
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
