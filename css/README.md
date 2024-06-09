@@ -1,21 +1,17 @@
-# 스크롤 바 숨기기
+---
+coverY: 0
+---
 
-```css
-body{
- -ms-overflow-style: none;
- }
- 
-::-webkit-scrollbar {
-  display: none;
-}
+# README
 
-/*특정 부분 스크롤바 없애기*/
+## css 공부 페이지
 
-.box{
-   -ms-overflow-style: none;
-}
-.box::-webkit-scrollbar{
-  display:none;
-}
-출처: https://wooaoe.tistory.com/49 [개발개발 울었다:티스토리]
-```
+이 페이지는 css와 css 라이브러리를 공부한 내용을 정리한 페이지입니다.
+
+### css 정리
+
+[README (1).md](<README (1).md> "mention")
+
+### styled-component 정리
+
+[Broken link](broken-reference "mention")
