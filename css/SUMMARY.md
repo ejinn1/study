@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README](README.md)
+* [CSS](README.md)
 * [스크롤 바 숨기기](<README (1).md>)
 
 ## styled-component
