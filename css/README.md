@@ -2,7 +2,7 @@
 coverY: 0
 ---
 
-# README
+# CSS
 
 ## css 공부 페이지
 
@@ -10,8 +10,12 @@ coverY: 0
 
 ### css 정리
 
-[README (1).md](<README (1).md> "mention")
+{% content-ref url="README (1).md" %}
+[README (1).md](<README (1).md>)
+{% endcontent-ref %}
 
 ### styled-component 정리
 
-[Broken link](broken-reference "mention")
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
