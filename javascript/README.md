@@ -1,29 +1,18 @@
-# BigO
+---
+coverY: 0
+---
 
-### 시간 복잡도
+# README
 
+## JavaScript 공부 페이지
 
+이 페이지는 JavaScript와 알고리즘 공부한 내용을 정리하였습니다.
 
-### 공간 복잡도
+### 알고리즘 공부
 
-### &#xD;
+[README (1).md](<README (1).md> "mention")
 
+### JavaScript 공부
 
+[undefined.md](js-learn/undefined.md "mention")
 
-push - O(1)
-
-pop - O(1)
-
-shift - O(n)
-
-unshift - O(n)
-
-concat - O(n)
-
-slice - O(n)
-
-splice - O(n)
-
-sort - O(N\*logN)
-
-forEach, map, reduce, filter - O(n)

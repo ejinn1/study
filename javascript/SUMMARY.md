@@ -1,8 +1,12 @@
 # Table of contents
 
+## default
+
+* [README](README.md)
+
 ## Algorithm
 
-* [BigO](README.md)
+* [BigO](<README (1).md>)
 * [문제 접근](algorithm/undefined.md)
 * [재귀](algorithm/undefined-1.md)
 * [검색](algorithm/undefined-2.md)
