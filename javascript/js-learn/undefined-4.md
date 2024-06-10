@@ -1,6 +1,6 @@
 # 거리 계산
 
-### <mark style="color:green;">절댓값을 이용한 거리 계산 (맨해튼 거리)</mark>
+### <mark style="color:green;">절대값을 이용한 거리 계산 (맨해튼 거리)</mark>
 
 두 점 사이의 수직 및 수평 거리의 합
 
