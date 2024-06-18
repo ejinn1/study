@@ -1,8 +1,16 @@
-# next + styled-component ssr
+# next + styled-component (SSR)
+
+### styled-component 설치
+
+```shell
+npm install styled-components
+```
+
+
+
+### next config 설정
 
 ```javascript
-// next.config.mjs
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compiler: {
@@ -16,56 +24,9 @@ export default nextConfig;
 
 
 
-
-
-
-
-
+### \_Document 파일 설정
 
 ```typescript
-// registry.tsx
-
-"use client";
-
-import { useServerInsertedHTML } from "next/navigation";
-import React, { useState } from "react";
-import { ServerStyleSheet, StyleSheetManager } from "styled-components";
-
-export default function StyledComponentsRegistry({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  // Only create stylesheet once with lazy initial state
-  // x-ref: https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
-  const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
-
-  useServerInsertedHTML(() => {
-    const styles = styledComponentsStyleSheet.getStyleElement();
-    styledComponentsStyleSheet.instance.clearTag();
-    return <>{styles}</>;
-  });
-
-  if (typeof window !== "undefined") return <>{children}</>;
-
-  return (
-    <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-      {children}
-    </StyleSheetManager>
-  );
-}
-
-```
-
-
-
-
-
-
-
-```typescript
-// _documents.tsx
-
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -122,15 +83,46 @@ export default class MyDocument extends Document {
 
 
 
-
-
-
-
-
+### registry 파일 설정
 
 ```typescript
-// layout.tsx
+"use client";
 
+import { useServerInsertedHTML } from "next/navigation";
+import React, { useState } from "react";
+import { ServerStyleSheet, StyleSheetManager } from "styled-components";
+
+export default function StyledComponentsRegistry({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  // Only create stylesheet once with lazy initial state
+  // x-ref: https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
+  const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
+
+  useServerInsertedHTML(() => {
+    const styles = styledComponentsStyleSheet.getStyleElement();
+    styledComponentsStyleSheet.instance.clearTag();
+    return <>{styles}</>;
+  });
+
+  if (typeof window !== "undefined") return <>{children}</>;
+
+  return (
+    <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
+      {children}
+    </StyleSheetManager>
+  );
+}
+
+```
+
+
+
+### 루트 layout
+
+```typescript
 import StyledComponentsRegistry from "@/libs/registry";
 import StyledThemeProvider from "@/provider/ThemeProvider";
 import type { Metadata } from "next";
@@ -161,3 +153,4 @@ export default function RootLayout({
 }
 
 ```
+
